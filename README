@@ -1,4 +1,4 @@
 This in no way is a serious linked list implementation, I am not aiming for great performance etc. it is strictly a 
-matter of my personal learning of rust.
+matter of my personal learning of Rust.
 
 Yes the implementation of a linked list in Rust is pain for new Rust users, I can attest to that.
