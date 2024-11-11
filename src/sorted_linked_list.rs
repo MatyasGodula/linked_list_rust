@@ -57,9 +57,10 @@ impl<T: Ord> SortedList<T> { // the implementation for the linked list requires 
 
         let mut current = self.head.as_mut();
         while let Some(node) = current { // node == &mut Box<Node<T>>
-            println!("deleting");
-            if node.next.is_some() && node.next.as_ref().unwrap().value == value {
-                node.next = node.next.as_mut().unwrap().next.take();
+            if let Some(next_node) = node.next.as_mut() {
+                if next_node.value == value {
+                    node.next = next_node.next.take();
+                }
             }
             current = node.next.as_mut();
         }
