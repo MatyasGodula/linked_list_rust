@@ -2,3 +2,11 @@ This in no way is a serious linked list implementation, I am not aiming for grea
 matter of my personal learning of Rust.
 
 Yes the implementation of a linked list in Rust is pain for new Rust users, I can attest to that.
+
+Challenges while implementing:
+    - Had to try to not use .unwrap() as a crutch to get something to work
+        - Usually using if let Some() ... is better than using .is_some() and then .unwrap()
+    - Managing references
+        - Especially learning to use .as_ref() to prevent taking ownership of values
+
+In general i found this exercise to be roughly 2-3x harder tahn making a linked list in C, but i feel lik it has given me some experience
